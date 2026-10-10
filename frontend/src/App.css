@@ -1,0 +1,109 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #292e28;
+  background: #f5f4ef;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --green: #526b50;
+  --green-dark: #344a36;
+  --cream: #f5f4ef;
+  --white: #ffffff;
+  --text: #292e28;
+  --muted: #858a80;
+  --border: #e9e8e0;
+  --shadow: 0 8px 30px rgba(36, 44, 34, 0.05);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text);
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Manrope', sans-serif;
+  color: var(--text);
+  letter-spacing: -0.6px;
+}
+
+h1 {
+  font-size: clamp(28px, 4vw, 38px);
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 23px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(82, 107, 80, 0.12);
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 11px 18px;
+  background: var(--green);
+  color: white;
+  font-weight: 600;
+}
+
+button:hover {
+  background: var(--green-dark);
+}
+
+a {
+  color: var(--green);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 27px;
+  }
+}
