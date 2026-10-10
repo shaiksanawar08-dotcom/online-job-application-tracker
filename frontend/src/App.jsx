@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import API_BASE_URL from "./api";
 
 function App() {
   const [applications, setApplications] = useState([]);
@@ -30,7 +31,7 @@ function App() {
     const fetchApplications = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/applications"
+          `${API_BASE_URL}/api/applications`
         );
 
         setApplications(response.data);
@@ -111,7 +112,7 @@ function App() {
         };
 
         const response = await axios.put(
-          `http://localhost:5000/api/applications/${editingId}`,
+          `${API_BASE_URL}/api/applications/${editingId}`,
           application
         );
 
@@ -145,7 +146,7 @@ function App() {
         };
 
         const response = await axios.post(
-          "http://localhost:5000/api/applications",
+          `${API_BASE_URL}/api/applications`,
           application
         );
 
@@ -188,7 +189,7 @@ function App() {
       };
 
       const response = await axios.put(
-        `http://localhost:5000/api/applications/${application._id}`,
+        `${API_BASE_URL}/api/applications/${application._id}`,
         updatedApplication
       );
 
@@ -238,7 +239,7 @@ function App() {
 
     try {
       await axios.delete(
-        `http://localhost:5000/api/applications/${id}`
+        `${API_BASE_URL}/api/applications/${id}`
       );
 
       setApplications((previous) =>
@@ -1690,3 +1691,4 @@ function App() {
 }
 
 export default App;
+
